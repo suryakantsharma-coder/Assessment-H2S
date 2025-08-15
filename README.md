@@ -1,1 +1,94 @@
-# Assessment-H2S
+# Product Management Dashboard
+
+## 📌 Overview
+
+A **React + Tailwind CSS** admin dashboard for managing products, featuring a Product Table Showcase, Drag-and-Drop columns, Cart functionality, and Statistics overview.
+
+## 🚀 Setup Steps
+
+```bash
+git clone https://github.com/suryakantsharma-coder/Assessment-H2S.git
+cd product-dashboard
+npm install
+npm start
+```
+
+## 📂 Project Structure
+
+```
+src/
+  components/
+    CartSlideBar.jsx
+    Header.jsx
+    ProductCardGrid.jsx
+    ProductDashboard.jsx
+    ProductTable.jsx
+    StartCard.jsx
+  constant/
+    mockProducts.js
+  context/
+    AppContext.js
+  utils/
+    paginateData.js
+```
+
+## ✨ Features
+
+### 1. Add to Cart
+
+- Button for each product
+- Cart badge in header
+- Slide-out cart sidebar with quantity controls & total price
+- In-memory state (no localStorage)
+
+### 2. Product Table Showcase
+
+- Columns: ID, Image, Name, Category, Price, Stock, Status, Actions
+- Pagination (10 items/page)
+- Lazy Loading
+- Search & Filter (debounced)
+- Sortable columns
+- Row actions: Edit, Delete, View Details
+
+### 3. Drag & Drop Table
+
+- Reorder column headers with smooth animations
+- State persists reordered columns
+
+### 4. Product Dashboard (Main View)
+
+- Header with nav, search input, avatar
+- Stats Cards: Total Products, Total Revenue, Low Stock, Categories Count
+- Mobile-first responsive layout
+
+## 🛠 Data Management
+
+- Mock data generation with Set for unique categories
+- Debounced search
+- Memory-efficient pagination
+
+## ⚡ Optimizations
+
+- **useState** for reactive state
+- **useEffect** for derived data and debouncing
+- **useMemo** for expensive calculations
+- **useCallback** for memoized handlers
+- **useRef** for non-reactive data (e.g., drag index)
+
+## ⏱ Time Tracking
+
+Feature Time Spent
+
+Add to Cart: 2-3h  
+ Product Table Showcase: 2h  
+ Drag and Drop Table: 4h  
+ Product Dashboard UI: 2-3h  
+ Optimizations: 3h  
+ Testing & Bug Fixing: 2-3h  
+ **Total** | **18h**
+
+## 🧩 Challenges & Solutions
+
+1. Large dataset performance → Pagination & lazy loading
+2. Debounced search → useEffect + setTimeout
+3. Column reordering → useRef + controlled state
