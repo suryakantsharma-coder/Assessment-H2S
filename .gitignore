@@ -98,3 +98,4 @@ Add to Cart: 2-3h
 1. Large dataset performance → Pagination & lazy loading
 2. Debounced search → useEffect + setTimeout
 3. Column reordering → useRef + controlled state
+4. Responsive design → Tailwind CSS utility classes
